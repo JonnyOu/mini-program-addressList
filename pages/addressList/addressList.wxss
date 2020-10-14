@@ -1,0 +1,57 @@
+/* pages/addressList/addressList.wxss */
+
+.page {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.item {
+  margin: 40rpx 0;
+}
+
+.type {
+  color: #999999;
+  font-size: 26rpx;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+}
+
+.img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.name {
+  margin-left: 20rpx;
+}
+
+.border-top-line {
+  border-top: 1px solid #eeeeee;
+}
+
+.list {
+  position: fixed;
+  top: 40rpx;
+  right: 14rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+
+.current-list {
+  color: #ff8866;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 88%;
+  color: white;
+  background-color: #ff8866;
+  text-align: center;
+  font-size: 26rpx;
+}

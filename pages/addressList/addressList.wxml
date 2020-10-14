@@ -1,0 +1,33 @@
+<!--pages/addressList/addressList.wxml-->
+
+<view class="page">
+  <scroll-view scroll-y="true" bindscroll="scroll" style="height: {{ windowHeight?windowHeight+'px':'' }}" scroll-into-view="{{ toView }}" scroll-with-animation="true">
+    <view wx:for="{{ addressList }}" wx:for-item="item" wx:for-index="indexType" wx:key="indexType">
+      <view class="item" id="{{ 'list'+indexType }}">
+        <view class="type">{{ item.type }}</view>
+        <block wx:for="{{ item.members }}" wx:for-item="member" wx:for-index="index" wx:key="index">
+          <view class="member {{ index>0?'border-top-line':'' }}">
+            <image src="{{ member.img }}" class="img"></image>
+            <text class="name">{{ member.name }}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 右侧列表 -->
+  <view class="list">
+    <block wx:for="{{ list }}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="{{ currentList==index?'current-list':'' }}" bindtap="addressListAnswer" data-index="{{ index }}">
+        {{ item }}
+      </view>
+    </block>
+  </view>
+
+  <!-- 顶部列表 -->
+  <view class="topbar">
+    {{ list[currentList] }}
+  </view>
+
+
+</view>
